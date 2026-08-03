@@ -7,12 +7,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-  res.json({
-    status: "healthy",
-    uptime: process.uptime(),
-  });
+  res.json({ status: "healthy", uptime: process.uptime() });
 });
-
 module.exports = app;
 
 /* istanbul ignore next -- bootstrap; only runs when invoked as `node src/app.js` */
